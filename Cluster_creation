@@ -43,3 +43,21 @@ kops create -f cluster.yml
 kops update cluster --name cloud-guru.xyz --yes --admin
 kops validate cluster --wait 10m
 kops delete -f cluster.yml  --yes
+
+
+
+=================
+
+sudo snap install --classic certbot
+
+sudo certbot certonly \
+  --agree-tos \
+  --email lakshmanreddy9182@gmail.com \
+  --manual \
+  --preferred-challenges=dns \
+  -d *.cloud-guru.xyz \
+  --server https://acme-v02.api.letsencrypt.org/directory
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.1/deploy/static/provider/aws/
+
+kubectl create secret tls nginx-tls-default --key="tls.key" --cert="tls.crt"

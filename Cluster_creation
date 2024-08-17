@@ -61,3 +61,5 @@ sudo certbot certonly \
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.1/deploy/static/provider/aws/deploy.yaml
 
 kubectl create secret tls nginx-tls-default --key="tls.key" --cert="tls.crt"
+
+kubectl create secret docker-registry docker-pwd --docker-username=lakshman7097 --docker-password=chickenbiriyani@123 --docker-email=lakshmanreddy7097@gmail.com

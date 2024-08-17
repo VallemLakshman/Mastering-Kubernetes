@@ -62,4 +62,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/cont
 
 kubectl create secret tls nginx-tls-default --key="tls.key" --cert="tls.crt"
 
-kubectl create secret docker-registry docker-pwd --docker-username=lakshman7097 --docker-password=chickenbiriyani@123 --docker-email=lakshmanreddy7097@gmail.com
+kubectl create secret docker-registry docker-pwd \
+--docker-server=docker.io --docker-username=lakshman7097 \
+--docker-password=dckr_pat_m8mdGqNLSYqO9aca5RXNIPh_8zA \
+--docker-email=lakshmanreddy7097@gmail.com

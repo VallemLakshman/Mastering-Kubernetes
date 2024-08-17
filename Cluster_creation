@@ -58,6 +58,6 @@ sudo certbot certonly \
   -d *.cloud-guru.xyz \
   --server https://acme-v02.api.letsencrypt.org/directory
 
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.1/deploy/static/provider/aws/
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.1/deploy/static/provider/aws/deploy.yaml
 
 kubectl create secret tls nginx-tls-default --key="tls.key" --cert="tls.crt"
